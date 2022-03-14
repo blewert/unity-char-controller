@@ -58,3 +58,9 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+
+# Additions to fix custom projects (added by bw 12-02-21)
+*.env
+[Aa]ssets/*.env
+[Aa]ssets/[Aa]uth
+
