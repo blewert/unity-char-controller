@@ -164,7 +164,7 @@ namespace Bloktopia
 
             
             //Get movement vector in camera space, cancel y
-            var movementVec = Camera.main.transform.TransformDirection(new Vector3(characterMovement.x, 0, characterMovement.y));
+            var movementVec = Camera.main.transform.TransformDirection(new Vector3(characterMovement.x, 0, characterMovement.y)).normalized;
 
             //Project onto the xz plane and normalize because we dont care about ||v||
             var projectedVec = Vector3.ProjectOnPlane(movementVec, Vector3.up).normalized;
@@ -173,7 +173,7 @@ namespace Bloktopia
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(projectedVec, Vector3.up), Time.deltaTime * controllerSettings.turnSpeed);
 
             //Add a force in this direction, scaled by input axes magnitude
-            rigidbody.AddForce((transform.forward * controllerSettings.maxMovementForce) * characterMovement.magnitude, ForceMode.Force);
+            rigidbody.AddForce((transform.forward * controllerSettings.maxMovementForce * Time.deltaTime) * characterMovement.magnitude, ForceMode.Force);
         }
 
         /// <summary>

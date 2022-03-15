@@ -45,6 +45,10 @@ public class ShowInputSchemes : MonoBehaviour
     /// </summary>
     private Vector3 originalPos;
 
+    /// <summary>
+    /// Attack button sprite
+    /// </summary>
+    public UnityEngine.UI.Image attackButtonSprite;
 
 
     public void OnMoveInput(InputAction.CallbackContext context)
@@ -56,6 +60,15 @@ public class ShowInputSchemes : MonoBehaviour
         //Otherwise, reset
         else if (context.canceled)
             movementVec = default;
+    }
+
+    public void OnAttackInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+            attackButtonSprite.color = Color.yellow;
+
+        if (context.canceled)
+            attackButtonSprite.color = Color.white;
     }
 
 
