@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Bloktopia.CameraController
+namespace Bloktopia
 {
     public interface ICameraController
     {
-        public void Init(in Settings settings);
+        public void Init(CameraControllerSettings settings, Transform character, Camera camera);
 
         public void Update();
     }

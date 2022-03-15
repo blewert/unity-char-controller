@@ -14,6 +14,16 @@ namespace Bloktopia
         /// </summary>
         public bool enabled = true;
 
+        /// <summary>
+        /// Offset
+        /// </summary>
+        public Vector3 offset;
+
+        /// <summary>
+        /// Distance to offset by
+        /// </summary>
+        public float distance;
+
         // public enum CameraControllerType
         // {
         //     BLANK, FIXED

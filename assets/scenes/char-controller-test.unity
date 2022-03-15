@@ -780,11 +780,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraSettings:
     enabled: 1
+    offset: {x: 0.25, y: 0.31, z: 0.38}
+    distance: 9.27
   controllerSettings:
     maxMovementForce: 5
     jumpImpulseSpeed: 50
     turnSpeed: 0.5
     freezeRollPitchRotation: 1
+    playerAnimator: {fileID: 0}
+    animationMovementVariable: walkSpeed
+    animationAttackTriggerVariable: smash
+    jumpAnimationTriggerVariable: jump
+    immovableMovementClips:
+    - Smash
+    - Jump
 --- !u!1 &2109669020
 GameObject:
   m_ObjectHideFlags: 0
