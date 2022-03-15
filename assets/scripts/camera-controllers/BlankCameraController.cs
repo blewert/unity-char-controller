@@ -16,7 +16,7 @@ namespace Bloktopia.CameraController
         public void Update()
         {
             //Something else 
-            Debug.Log("Update called in BlankCameraController.");
+            // Debug.Log("Update called in BlankCameraController.");
         }
 
     }   
